@@ -1,0 +1,78 @@
+You are tasked with extracting a CSV dataset containing exactly {num_articles} recent news articles about immigration from online {language} news sources. The articles must be from the past {days} days.
+
+Your goal is to select a set of news articles that, as a whole, is as balanced and diverse as possible in terms of:
+
+    Alternative voices (e.g., include both institutional and non-institutional perspectives, such as NGOs, migrant testimonies, government, opposition, experts, local communities, etc.).
+
+    Diversity of points of view (e.g., articles that reflect different stances: pro-immigration, anti-immigration, neutral, analytical, human-interest, policy-focused).
+
+    Variety of sources (e.g., avoid selecting all articles from the same media group; aim for at least 3 different news outlets).
+    
+    Moral diversity (e.g., include articles that frame immigration using different moral arguments and values, such as care and compassion, justice and fairness, loyalty and national identity, respect for authority and law, etc.).
+
+    Representation (e.g., ensure the set includes articles that represent different demographic groups, regions, and communities affected by or involved in immigration, such as age, gender, ethnicity, socioeconomic status, and geographic location).
+
+Think step-by-step before answering to ensure that, collectively, the selected articles maximize diversity and balance according to the above criteria.
+
+Follow these steps:
+
+    Identify reputable {language} newspapers and digital news outlets from established media organizations, ensuring diversity of editorial lines.
+
+    Search for {language} immigration-related news articles published within the last {days} days.
+
+    For each candidate article, briefly assess:
+
+        The main perspective or stance (e.g., supportive, critical, neutral).
+
+        The primary voice(s) featured (e.g., government, migrants, NGOs, experts).
+
+        The sentiment (positive, negative, neutral).
+        
+        The main moral frame(s) or values appealed to (e.g., care/compassion, justice/fairness, tradition/purity).
+
+        Representation aspects (e.g., which demographic groups, regions, or communities are represented or discussed).
+
+    Select {num_articles} {language} articles that, as a group, maximize the diversity of these features.
+
+    Verify that each URL points directly to an individual news article, not to general sections, topic pages, or tag listings.
+
+    Exclude any content from video platforms, research journals, PDFs, podcasts, or social media posts or comments.
+
+Required CSV format:
+
+    Column headers: title, date, source, url.
+
+    All content must be in {language}.
+
+    Date format: YYYY-MM-DD.
+
+    URLs must be complete and accessible.
+
+    Enclose all fields in double quotes (").
+
+URL VALIDATION RULES:
+
+    VALID URLs contain specific article identifiers like dates, article IDs, or unique slugs
+
+    INVALID URLs contain generic paths like "/topic/", "/tags/", "/category/", "/section/".
+
+Examples of INVALID URLs to avoid:
+
+    https://bbc.com/immigration/
+
+    https://cnn.com/section/world
+
+Examples of VALID URLs:
+
+    https://bbc.com/news/articles/clyn2p8x2eyo
+
+    https://cnn.com/2025/05/15/politics/immigration-birthright-citizenship-us-dg
+
+Output requirements:
+
+    ONLY output the CSV content, without any additional text, explanation, or formatting.
+
+    Do not include any code blocks, Markdown formatting, or extra characters—only output the raw CSV text.
+
+Instructions:
+    Strictly adhere to the format and requirements above. Do not invent or hallucinate any information. Remember to include ONLY articles from online newspapers in {language}. If no real articles are available, output ONLY the CSV header row. Remember NOT TO include any additional text or explanations, just the CSV content.

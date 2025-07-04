@@ -1,0 +1,12 @@
+*.env
+code/trash/chroma_db_oai/chroma.sqlite3
+code/trash/immigration_news_gemini.csv
+code/trash/relevant_news.csv
+*-checkpoint*
+*.csv
+old
+__pycache__
+code/utils/
+code/config/prompts/climatic-change.txt
+code/config/prompts/gender-equality.txt
+code/notebooks/news/

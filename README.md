@@ -1,1 +1,1 @@
-## Prompt and supplementary material for the paper
+## Prompt and supplementary material for the paper ""Evaluation of Diversity in \acs{LLM}-Based News Discovery Through an Agent-Based System"

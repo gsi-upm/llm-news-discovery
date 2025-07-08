@@ -6,7 +6,8 @@ code/trash/relevant_news.csv
 *.csv
 old
 __pycache__
-code/utils/
+code/utils/news_download_utils.py
+code/utils/evaluation_utils.py
 code/config/prompts/climatic-change.txt
 code/config/prompts/gender-equality.txt
 code/notebooks/news/
